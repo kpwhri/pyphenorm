@@ -1,0 +1,32 @@
+[build-system]
+requires = ['flit_core >=3.2']
+build-backend = 'flit_core.buildapi'
+
+[project]
+name = 'pyphenorm'
+version = '0.0.1'
+authors = [
+    { name = 'dcronkite', email = 'dcronkite+pypi@gmail.com' }
+]
+license = { file = 'LICENSE'}
+homepage = 'https://github.com/kpwhri/pyphenorm'
+description = 'Python implmenetation of PheNORM phenotyping algorithm.'
+requires-python = '>=3.10'
+dependencies = [
+    'click',
+    'pandas',
+    'loguru'
+]
+readme = 'README.md'
+keywords = ['nlp', 'information extraction', 'phenotyping']
+classifiers = [  # https://pypi.org/classifiers/
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Science/Research',
+    'Programming Language :: Python :: 3 :: Only',
+    'Topic :: Text Processing :: Linguistic',
+    'License :: OSI Approved :: MIT License',
+    'Intended Audience :: Healthcare Industry',
+]
+
+[project.optional-dependencies]
+dev = ['pytest']
