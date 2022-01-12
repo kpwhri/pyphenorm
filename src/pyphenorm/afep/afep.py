@@ -30,10 +30,12 @@ from pyphenorm.afep.semtypes import SEMTYPES
               help='Directory to place output.')
 def run_afep_selection(datadirs: list[pathlib.Path], *, outformat='json', outpath: pathlib.Path = None):
     """
+    Run afep on the output directory from Metamaplite. AFEP will select a minimum set of CUIs
+        to supply to PheNorm for feature selection. For more details, see the PheNorm paper.
 
-    :param datadirs:
-    :param outformat:
-    :param outpath:
+    :param datadirs: data directories with output json files from running Metamaplite
+    :param outformat: only json is currently supported
+    :param outpath: output directory (default is current directory)
     :return:
     """
     now = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
